@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1084346813557",
+    "project_id": "food-c3903",
+    "storage_bucket": "food-c3903.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084346813557:android:9177ce8d4e36302f70bc3c",
+        "android_client_info": {
+          "package_name": "fumishaikh.dev.food_iconandfilesplash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrdLO2hj-2VCqHC_UIwTZQrdutGzE3PBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
