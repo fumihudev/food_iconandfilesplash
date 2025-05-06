@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:food_iconandfilesplash/app/modules/auth/controllers/auth_controller.dart';
 
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
-  const ProfileView({super.key});
+  ProfileView({super.key});
+  final AuthController authController = Get.find();
+  final GetStorage storage = GetStorage();
+  //the find of this page is for ProfileController but we need AuthController, so that used Get.find()
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ProfileView'),
+        title: const Text('Profile'),
         centerTitle: true,
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'ProfileView is working',
+          'Hello, ${storage.read('username')}',
           style: TextStyle(fontSize: 20),
         ),
       ),
