@@ -12,6 +12,7 @@ class AuthController extends GetxController {
   //for ease of use for developer, these variables are created:
   //a variable from GetStorage
   final GetStorage _storage = GetStorage();
+  final loginKey = "isLoggedIn";
 
   //a variable to call the users' data
   final List <UsersModel> users = Users.users;
@@ -33,6 +34,8 @@ class AuthController extends GetxController {
     super.onClose();
   }
 
+  void logout () => _storage.erase();
+
   Future<void> login (String email, String password) async {
     try {
       final user = users.firstWhere(
@@ -46,8 +49,8 @@ class AuthController extends GetxController {
         'Error', 
         'Email or Password is incorrect!',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
-        colorText: Colors.white
+        backgroundColor: Colors.white,
+        colorText: Colors.redAccent
       );
     }
   }

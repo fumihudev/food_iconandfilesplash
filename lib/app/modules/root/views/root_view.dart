@@ -12,6 +12,9 @@ class RootView extends GetView<RootController> {
     // size holds the phone screen size which runs the app
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: Drawer(
+        
+      ),
       body: Obx(() => controller.screens[controller.selectedIndex]),
       bottomNavigationBar: Obx(() => Container(
 
